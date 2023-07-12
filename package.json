@@ -3,12 +3,17 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+    "license": "MIT",
     "scripts": {
         "dev": "vite --port 3000",
-        "build": "tsc && vite build",
+        "build": "rm -rf dist && tsc --emitDeclarationOnly -p tsconfig.build.json && vite build --mode lib",
+        "build-demo": "rm -rf build && tsc && vite build --mode demo",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --write *",
         "preview": "vite preview",
-        "predeploy": "yarn build; touch build/.nojekyll",
+        "predeploy": "yarn build-demo; touch build/.nojekyll",
         "deploy": "gh-pages -d build"
     },
     "peerDependencies": {
