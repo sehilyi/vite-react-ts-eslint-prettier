@@ -21,10 +21,7 @@ const dev = defineConfig({
     root: './demo',
     build: {
         outDir: '../build'
-    },
-    server: {
-        open: './demo/index.html'
-    },
+    }
 });
 
 export default ({ mode }) => {
