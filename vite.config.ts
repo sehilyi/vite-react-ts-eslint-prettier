@@ -18,17 +18,13 @@ const lib = defineConfig({
 
 const dev = defineConfig({
     plugins: [react()],
+    root: './demo',
     build: {
-        outDir: 'build',
-        rollupOptions: {
-            input: {
-                app: './demo/index.html'
-            }
-        }
+        outDir: '../build'
     },
     server: {
         open: './demo/index.html'
-    }
+    },
 });
 
 export default ({ mode }) => {
