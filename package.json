@@ -1,7 +1,8 @@
 {
     "name": "vite-react-ts-eslint-prettier",
-    "private": true,
     "version": "0.0.0",
+    "private": true,
+    "homepage": "https://sehilyi.github.io/vite-react-ts-eslint-prettier/",
     "type": "module",
     "main": "dist/index.js",
 	"module": "dist/index.js",
