@@ -14,7 +14,7 @@
         "build-demo": "rm -rf build && tsc && vite build --mode demo",
         "lint": "eslint src --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --write *",
         "preview": "vite preview",
-        "predeploy": "yarn build-demo; touch build/.nojekyll",
+        "predeploy": "yarn build-demo && touch build/.nojekyll",
         "deploy": "gh-pages -d build"
     },
     "peerDependencies": {
