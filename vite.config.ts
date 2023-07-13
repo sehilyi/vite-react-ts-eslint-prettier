@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -21,6 +22,10 @@ const dev = defineConfig({
     root: './demo',
     build: {
         outDir: '../build'
+    },
+    test: {
+        include: ['../**/*.{test,spec}.?(c|m)[jt]s?(x)'],
+        globals: true
     }
 });
 
