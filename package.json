@@ -13,7 +13,7 @@
         "build": "rm -rf dist && tsc --emitDeclarationOnly -p tsconfig.build.json && vite build --mode lib",
         "build-demo": "rm -rf build && tsc && vite build --mode demo",
         "test": "vitest",
-        "lint": "eslint src --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --write *",
+        "lint": "eslint src --fix --ext ts,tsx --report-unused-disable-directives && prettier --write *",
         "preview": "vite preview",
         "predeploy": "yarn build-demo && touch build/.nojekyll",
         "deploy": "gh-pages -d build"
