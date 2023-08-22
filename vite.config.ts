@@ -18,6 +18,7 @@ const lib = defineConfig({
 });
 
 const dev = defineConfig({
+    base: '/vite-react-ts-eslint-prettier/',
     plugins: [react()],
     root: './demo',
     build: {
